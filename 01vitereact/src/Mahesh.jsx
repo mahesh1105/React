@@ -1,6 +1,7 @@
 function Mahesh() {
+    const username = 'mahesh'
     return (
-        <h1>Hi, Mahesh Here...</h1>
+        <h1>Hi, {username} Here...</h1>
     )
 }
 
