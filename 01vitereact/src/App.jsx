@@ -20,3 +20,23 @@ export default App
 
   Also, while importing any JS file, its not necessary to write the extension of file
 */
+
+/*
+  React.createDOM will basically creates the virtual DOM and Whenever any changes happens in UI in browser, it compares
+  it with Virtual DOM and only update the things which are changed
+
+  But, whenever any changes happens in UI, Browser will remove the complete DOM and creates it again and load it
+  That's the reason reloading will happen, where whole DOM will repaint(whole structure is prepared again)
+
+  In case of Virual DOM, we can track the data in form of tree and whatever changes happens, it can be updated that time
+  instead of loading of DOM again, Because of Virtual DOM reloading will not happen and it will save our time
+
+  Fiber:
+  ------
+  React uses fiber(react's core algorithm) to update the virtual DOM behind the scenes
+
+  Reconciliation:
+  ---------------
+  It is an algorithm that react uses to differentiate one tree with another to determine which parts need to be changed
+  Reconciliation is an algorithm behind what is popularly understood as "virtual DOM"
+*/
