@@ -86,6 +86,9 @@ function App() {
     setCounter(prevCounter => prevCounter + 1);
 
     // Now, if the addVal() function will be called then counter will get incremented by 4 each time
+    // Note: Here you will take the previous state each time, so first setCounter will be executed and it will update the counter
+    // then again when setCounter will be called then it will ask for previous state, which last function call updated,
+    // So, all four function will be executed one by one
   }
 
   function remVal() {
