@@ -63,10 +63,29 @@ function App() {
 
   function addVal() {
     // It will not go beyond 20
-    if(counter < 20) {
-      counter++;
-    }
-    setCounter(counter);
+    // if(counter < 20) {
+    //   counter++;
+    // }
+    // setCounter(counter);
+
+    // Interview Question - What will be the final value of counter and why?
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+    // setCounter(counter+1);
+
+    // Everytime when addVal() function will be called then counter will be incremented to 1 only
+    // Reason: Above code will be sent in batches and as all the code are doing same thing, then it will update only once
+
+    // To update it multiple time, we need to take previous reference of counter and it will get updated each time
+    // so setCounter() function will basically takes the callback, from that we can take the reference of the prevCounter and update it
+
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
+
+    // Now, if the addVal() function will be called then counter will get incremented by 4 each time
   }
 
   function remVal() {
