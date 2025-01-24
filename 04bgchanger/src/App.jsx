@@ -38,4 +38,12 @@ export default App
   That's why, we will execute the function inside onClick so that onClick will get only callback
   onClick={() => {setColor('red')}}
   So, when button is clicked, then event will be triggered and callback will get executed and then inside function will get called
+
+  React State and Re-rendering:
+  -----------------------------
+  when you call setColor, React updates the state(color), which triggers the re-render of the App Component
+  During this re-render, the entire App function runs again, Therfore any code inside the App function is executed again
+
+  Note: React's functional components re-run the function on every render to ensure the UI is in sync with the current state and props. 
+  It's intentional and allows React to manage updates predictably. Using useEffect helps you control when side effects like DOM updates occur.
 */
