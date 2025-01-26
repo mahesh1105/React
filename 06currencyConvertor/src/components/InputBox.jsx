@@ -35,4 +35,36 @@ export default InputBox;
     ))}
     
     this will return an array of "options" with currency type, that is taken by select and will get displayed
+
+    useId:
+    ------
+    The useId hook in React is used to generate unique IDs for components.
+    It ensures that each instance of a component has a unique identifier, even if the component is rendered multiple times or across different parts of the application.
+
+    Why Use useId?
+    --------------
+    1. Accessibility (a11y):
+    - To link a <label> with its corresponding <input>, the htmlFor attribute of the <label> must match the id attribute of the <input>.
+    - This improves accessibility by enabling screen readers to associate the label with the input field.
+    
+    2. Avoiding Collisions:
+    - When rendering multiple instances of a component, manually specifying id values might lead to duplicate IDs, which can cause unexpected behavior.
+    - useId ensures IDs are unique across all instances and prevent collisions.
+    
+    ** How It Works in Your Code:
+    -----------------------------
+    1. Generate the ID:
+    - The amountInputId is generated using useId():
+        const amountInputId = useId();
+    -- This provides a unique ID for the <input> element in each InputBox component.
+    
+    2. Link the <label> to the <input>:
+    - The htmlFor attribute of the <label> is set to match the id of the <input>:
+        <label htmlFor={amountInputId} className="text-black/40 mb-2 inline-block">{label}</label>
+        <input id={amountInputId} className="outline-none w-full bg-transparent py-1.5" type="number" ... />
+    -- This ensures the label is correctly associated with the input field.
+    
+    3. Result:
+    - When a user clicks the label, the corresponding input field gains focus.
+    - It avoids any ID conflicts if multiple InputBox components are rendered simultaneously.
 */
