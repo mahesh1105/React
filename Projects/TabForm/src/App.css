@@ -1,0 +1,62 @@
+.heading-container {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.heading {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.tab-body {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid black;
+
+    height: 400px;
+}
+
+.comp-head {
+    margin-bottom: 10px;
+}
+
+.input-data {
+    border: 1px solid black;
+    height: 30px;
+    border-radius: 2px;
+    padding: 5px;
+
+    margin-bottom: 10px;
+}
+
+.input-data:focus {
+    border-color: rgb(40, 40, 199);
+}
+
+.interests {
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.button-cont {
+    margin: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #3725da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.error-message {
+    color: red;
+    display: block;
+    font-size: small;
+}
