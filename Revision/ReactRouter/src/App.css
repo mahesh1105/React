@@ -1,0 +1,42 @@
+.main-cont {
+  text-align: center;
+}
+
+.list-items {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+  list-style-type: none;
+  margin: 20px 0;
+  background-color: beige;
+  font-size: 1.5rem;
+}
+
+.item {
+  text-decoration: none;
+}
+
+.content {
+  font-size: 2rem;
+}
+
+.active {
+  color: white;
+  text-decoration: none;
+  background-color: #735ace;
+  padding: 7px;
+  border-radius: 7px;
+}
+
+.btn {
+  margin: 20px 0;
+  padding: 10px;
+  font-size: 1.3rem;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
