@@ -7,13 +7,14 @@ dotenv.config();
 
 const app = express();
 
+// If Vite Proxy is used in frontend, Then no need to use cors in backend
 // Fetch the CORS ORIGIN from env file
 // app.use(cors({
 //   origin: process.env.CORS_ORIGIN,
 // }));
 
 // ✅ Allow all origins
-app.use(cors());
+// app.use(cors());
 
 app.get('/', (req, res) => {
   console.log("Chill Mode On, Server is Running !!!");

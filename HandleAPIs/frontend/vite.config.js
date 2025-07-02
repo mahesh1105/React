@@ -5,13 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   // The below proxy will not work with github codespaces - 
   // As GitHub Codespaces uses a tunnel between your dev port and the internet. It has protection built-in.
-  // server: {
-  //   proxy: {
-  //     // This means: “Whenever the frontend tries to call something that starts with /api, 
-  //     // take the full path and forward it to that base URL — and append the rest as-is.”
-  //     '/api': 'https://opulent-happiness-94xggpqr49h77j9-5000.app.github.dev/',
-  //   },
-  // },
+  server: {
+    proxy: {
+      // This means: “Whenever the frontend tries to call something that starts with /api, 
+      // take the full path and forward it to that base URL — and append the rest as-is.”
+      '/api': 'http://localhost:5000',
+    },
+  },
   plugins: [react()],
 })
 
